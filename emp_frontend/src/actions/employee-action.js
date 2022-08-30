@@ -21,6 +21,7 @@ export const userRegisterAction=(userRegisterCredential)=>async(dispatch,getStat
             },
           };
         const {data}=await axios.post("http://localhost:5000/add-employee",userRegisterCredential,config)
+        console.log(data)
         dispatch({type:USER_REGISTER_SUCCESS,payload:data.result})
         
     } catch (error) {

@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { userLoginAction } from "../actions/auth-action";
-import swal from 'sweetalert'
+ 
 export default function Login({ history }) {
   const [login, setlogin] = useState({
     email: "",
@@ -28,10 +28,7 @@ export default function Login({ history }) {
     console.log(login);
     dispatch(userLoginAction(login));
     // e.target.reset();
-    swal({
-          title:"Login Successfully...🥰🥰🥰",
-          icon: "success"     
-      })
+     
   };
 
   return (

@@ -27,7 +27,7 @@ export default function Admin() {
   };
 
   return (
-    <div className="container-fluid alert alert-danger vh-100 mt-5">
+    <div className="container-fluid alert alert-danger  mt-5">
         <div className="col col-sm-8 offset-2 mt-5">
            <div className="table-responsive">
               <table className="table table-bordered">

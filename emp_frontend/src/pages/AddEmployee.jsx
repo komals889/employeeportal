@@ -18,7 +18,7 @@ export default function AddEmployee() {
             e.preventDefault()
             console.log(user);
             dispatch(userRegisterAction(user))
-            alert("employee added successfully")
+            // alert("employee added successfully")
             e.target.reset()
         }
   return (
@@ -31,7 +31,7 @@ export default function AddEmployee() {
                       <form onSubmit={onSubmitUserData}>
                           <input type="text"  onChange={e=> setuser({...user,name:e.target.value})} placeholder='Enter Name' minLength={1} maxLength={20} required className="form-control" /><br />
                           <input type="email"   onChange={e=> setuser({...user,email:e.target.value})} placeholder='Enter Email' minLength={1} maxLength={20} required className="form-control" /><br />
-                          <input type="password" pattern=".{6,}" title="Six"  onChange={e=>setuser({...user,password:e.target.value})}   placeholder='Enter Password' required className="form-control" /><br />
+                          <input type="password"   title="Six"  onChange={e=>setuser({...user,password:e.target.value})}   placeholder='Enter Password' required className="form-control" /><br />
                           <input type="date"  onChange={e=>setuser({...user,joiningDate:e.target.value})} placeholder='Enter Date' max="2022-07-05"  required className="form-control" /><br />
                           <input type="number"  onChange={e=>setuser({...user,empcode:e.target.value})} placeholder='Enter Employee Code'minLength={1} maxLength={2} required className="form-control" /><br />
                           <button className="btn btn-danger text-warning w-100">Add Employee</button><br /><br />

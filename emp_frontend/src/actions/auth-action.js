@@ -10,7 +10,7 @@ export const userLoginAction = (login) => async (dispatch, getState) => {
   try {
     dispatch({ type: USER_LOGIN_REQUEST });
     const { data } = await axios.post("auth-login", login);
-    // console.log(data);
+    console.log(data);
     dispatch({
       type: USER_LOGIN_SUCCESS,
       payload: { employeeInfo: data.result, token: data.token },
